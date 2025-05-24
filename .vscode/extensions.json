@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "yodlang.yod",
+    "ocamllabs.ocaml-platform",
+    "esbenp.prettier-vscode"
+  ]
+}

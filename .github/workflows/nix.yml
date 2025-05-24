@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 Milesime <213074881+milesime@users.noreply.github.com>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+name: Nix
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * 1
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    name: Update flake
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v17
+
+      - name: Update flake
+        uses: DeterminateSystems/update-flake-lock@v25
+        with:
+          pr-title: Update flake
+          commit-msg: Update flake
+          pr-body: |
+            ```
+            {{ env.GIT_COMMIT_MESSAGE }}
+            ```

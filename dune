@@ -1,0 +1,11 @@
+; SPDX-FileCopyrightText: 2025 Milesime <213074881+milesime@users.noreply.github.com>
+;
+; SPDX-License-Identifier: CC0-1.0
+
+(env
+ (dev
+  (flags
+   (:standard -w +A-30-42)))
+ (release
+  (ocamlopt_flags
+   (:standard -O3))))

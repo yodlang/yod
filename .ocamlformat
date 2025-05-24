@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Milesime <213074881+milesime@users.noreply.github.com>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+profile = ocamlformat
+version = 0.27.0
+parse-docstrings = true
+parse-toplevel-phrases = true
+wrap-comments = true
