@@ -24,16 +24,16 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Features
 
-- Purely functional
+- **Purely functional**
   - No side effects
   - Pattern matching
   - Polymorphism
-- VS Code language support
+- **VS Code language support**
   - Syntax highlighting
   - Formatting
   - Parsing
-- Helpful error messages
-- Unicode support
+- **Helpful error messages**
+- **Unicode support**
 
 ## Examples
 
@@ -94,6 +94,10 @@ On Unix-like operating systems, you will then need to run the following command:
 ```sh
 chmod +x /path/to/yod/executable
 ```
+
+## Why Yod?
+
+The name draws inspiration from the Hebrew letter Yodh, which is also the origin of the Greek letter Iota. Iota signifies something very small, a sentiment that perfectly encapsulates our vision for Yod: a language that is inherently simple, focused, and approachable. Our primary goal is for Yod to serve as an accessible platform for learning, where the code itself is designed to be clear, concise, and self-explanatory, making functional programming concepts intuitive for everyone.
 
 ## Contributing
 
