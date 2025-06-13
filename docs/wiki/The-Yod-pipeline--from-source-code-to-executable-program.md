@@ -40,7 +40,12 @@ Even if the code is syntactically sound, it still needs to make sense logically.
 
 The AST first needs to be simplified, this is where desugaring comes in, see [`desugar.ml`](https://github.com/yodlang/yod/blob/main/lib/desugar.ml). It walks the AST and simplify the sugared syntax: for example, it transform lambdas of multiple parameters to multiple single-parameter lambdas chained together. In doing so, the AST becomes much easier for the coming analysis passes to handle.
 
-Next up comes usage analysis, see [`usage_analysis.ml`](https://github.com/yodlang/yod/blob/main/lib/usage_analysis.ml). It again walks the AST, and for now only flags undefined identifiers as errors.
+Next up comes usage analysis, see [`usage_analysis.ml`](https://github.com/yodlang/yod/blob/main/lib/usage_analysis.ml). It again analyzes the AST, for issues related to variable, type and variant usage, by performing various static analyses on the program, including:
+
+- Warning about unused identifiers
+- Checking for references to undefined identifiers
+- Checking for name clash with reserved or duplicate identifiers
+- Checking for constructor mismatch of variants
 
 ## 4. Transpiling: converting the AST to another language
 
@@ -71,7 +76,10 @@ To summarize, here’s how the Yod pipeline transforms your code:
 3. Analysis:
 
    - The AST is desugared to make it easier to work with
-   - Undefined identifiers are flagged as errors using usage analysis
+   - Warns about unused identifiers
+   - Checks for references to undefined identifiers
+   - Checks for name clash with reserved or duplicate identifiers
+   - Checks for constructor mismatch of variants
 
 4. Transpiling:
 
