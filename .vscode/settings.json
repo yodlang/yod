@@ -1,6 +1,10 @@
 {
   "git.autofetch": true,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[dune]": {
     "editor.defaultFormatter": "ocamllabs.ocaml-platform"
