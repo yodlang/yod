@@ -53,12 +53,9 @@ module Output = struct
         ^ Printf.sprintf " for \u{201C}%s\u{201D}." name
 
   let loc_of_error = function
-    | Undefined {loc; _} ->
-        loc
-    | Reserved {loc; _} ->
-        loc
-    | Duplicate {loc; _} ->
-        loc
+    | Undefined {loc; _}
+    | Reserved {loc; _}
+    | Duplicate {loc; _}
     | ConstructorMismatch {loc; _} ->
         loc
 

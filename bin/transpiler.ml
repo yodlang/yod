@@ -7,7 +7,7 @@
 open Yod.Ast
 
 (* Using refs to track state across recursive traversals instead of threading
-   state through function calls — simplifies the implementation. *)
+   state through function calls, simplifies the implementation. *)
 let first_type = ref true
 
 let first_bind = ref true

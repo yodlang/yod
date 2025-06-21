@@ -22,7 +22,7 @@ let parse ?(json = false) buf =
       exit code
 
 (* Program analysis is separated from parsing to allow for independent
-   verification of different compiler stages — errors bubble up with clear
+   verification of different compiler stages, errors bubble up with clear
    context rather than cascading through the pipeline. *)
 let analyze ?(json = false) program =
   try Usage_analysis.analyze_program ~json program

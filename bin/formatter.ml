@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-only
  *)
 
-(* Maximum line length before wrapping occurs — standard width to ensure
+(* Maximum line length before wrapping occurs, standard width to ensure
    readability. *)
 let limit = 80
 

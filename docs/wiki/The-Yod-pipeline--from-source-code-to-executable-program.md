@@ -6,7 +6,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # The Yod pipeline: from source code to executable program
 
-In this guide, we’ll walk through the complete pipeline that transforms high-level source code into a runnable program. We’ll cover each stage — from lexing and parsing to analysis and transpiling — explaining their roles and how they interconnect.
+In this guide, we’ll walk through the complete pipeline that transforms high-level source code into a runnable program. We’ll cover each stage, from lexing and parsing to analysis and transpiling, explaining their roles and how they interconnect.
 
 ## 1. Lexing: transforming text into tokens
 
