@@ -77,6 +77,7 @@
           packages =
             with pkgs;
             [
+              packages.${system}.default
               reuse
               just
               ocamlformat_0_27_0
