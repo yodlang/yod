@@ -26,7 +26,6 @@
           version = "2025.6.13";
           src = self;
           strictDeps = false;
-          stdenv = pkgs.fastStdenv;
           buildInputs = with pkgs.ocamlPackages; [
             sedlex
             menhir
@@ -39,16 +38,6 @@
             runHook preBuild
             dune build --profile release -p ${pname} ''${enableParallelBuilding:+-j $NIX_BUILD_CORES}
             runHook postBuild
-          '';
-          checkPhase = ''
-            runHook preCheck
-            dune runtest --profile release -p ${pname} ''${enableParallelBuilding:+-j $NIX_BUILD_CORES}
-            runHook postCheck
-          '';
-          installPhase = ''
-            runHook preInstall
-            dune install --profile release --prefix $out --libdir $OCAMLFIND_DESTDIR ${pname} --docdir $out/share/doc --mandir $out/share/man
-            runHook postInstall
           '';
           meta = {
             description = "The Yod programming language";
@@ -72,8 +61,8 @@
       });
 
       devShells = forAllSystems (pkgs: {
-        default = pkgs.mkShell.override { stdenv = pkgs.fastStdenv; } {
-          inputsFrom = pkgs.lib.attrValues packages.${pkgs.system};
+        default = pkgs.mkShell {
+          inputsFrom = with pkgs; lib.attrValues packages.${system};
           packages =
             with pkgs;
             [
