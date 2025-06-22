@@ -23,7 +23,7 @@
         default = yod;
         yod = pkgs.ocamlPackages.buildDunePackage rec {
           pname = "yod";
-          version = "0.0.0";
+          version = "2025.6.13";
           src = self;
           strictDeps = false;
           stdenv = pkgs.fastStdenv;
