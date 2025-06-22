@@ -99,22 +99,25 @@ let print_usage () =
 ╰──────────────────────┴───────────────────────────────────────────────────╯|} ;
   exit 1
 
+let validate_file file =
+  if not (String.ends_with ~suffix:".yod" file) then print_usage ()
+
 (* Command handling uses pattern matching rather than complex parsing logic to
    keep the interface simple and maintainable while being easily extensible. *)
 let () =
   match Sys.argv with
   | [|_; "transpile"; file|] ->
-      transpile_file file
+      validate_file file ; transpile_file file
   | [|_; "transpile"|] ->
       transpile_stdin ()
   | [|_; "fmt"; file|] ->
-      format_file file
+      validate_file file ; format_file file
   | [|_; "fmt"|] ->
       format_stdin ()
   | [|_; "fmt-debug"|] ->
       fmt_debug ()
   | [|_; file|] ->
-      parse_file file
+      validate_file file ; parse_file file
   | [|_|] ->
       parse_stdin ()
   | _ ->
