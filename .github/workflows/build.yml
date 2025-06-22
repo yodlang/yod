@@ -38,31 +38,25 @@ jobs:
         include:
           - os: ubuntu-latest
             display-name: Ubuntu
-            ocaml-version: 5.3.0
-            ocaml-compiler: ocaml-variants.5.3.0+options,ocaml-option-flambda
             artifact: yod-x86_64-linux
           - os: macos-latest
             display-name: macOS
-            ocaml-version: 5.3.0
-            ocaml-compiler: ocaml-variants.5.3.0+options,ocaml-option-flambda
             artifact: yod-arm64-darwin
           - os: windows-latest
             display-name: Windows
-            ocaml-version: 5.3.0
-            ocaml-compiler: ocaml-variants.5.3.0+options,ocaml-option-flambda
             artifact: yod-x86_64-windows
 
     runs-on: ${{ matrix.os }}
-    name: Build with OCaml ${{ matrix.ocaml-version }} on ${{ matrix.display-name }}
+    name: Build with OCaml 5.3.0 on ${{ matrix.display-name }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up OCaml ${{ matrix.ocaml-version }}
+      - name: Set up OCaml 5.3.0
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          ocaml-compiler: ocaml-variants.5.3.0+options,ocaml-option-flambda
 
       - name: Install dependencies
         run: opam install --deps-only .
