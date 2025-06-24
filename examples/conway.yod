@@ -3,10 +3,6 @@
 # SPDX-License-Identifier: CC0-1.0
 
 # This is a simple implementation of Conway’s Game of Life in Yod.
-#
-# You can run the code with the following command:
-# $ yod transpile conway.yod
-# $ ocaml unix.cma -I +unix conway.yod.ml
 
 def living = "██"
 

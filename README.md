@@ -80,7 +80,7 @@ Following [docopt](http://docopt.org/) conventions:
 You can run transpiled files using:
 
 ```sh
-ocaml <file.ml>
+ocaml unix.cma -I +unix <file.ml>
 ```
 
 ## Installation
