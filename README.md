@@ -68,14 +68,14 @@ The expected file extension of the Yod programming language is `.yod`.
 
 Following [docopt](http://docopt.org/) conventions:
 
-| Command                | Description                                       |
-| :--------------------- | :------------------------------------------------ |
-| `yod`                  | Parse standard input and display the AST.         |
-| `yod <file>`           | Parse a file and display the AST.                 |
-| `yod fmt`              | Format standard input and output it.              |
-| `yod fmt <file>`       | Format a file and overwrite it.                   |
-| `yod transpile`        | Transpile standard input and output it.           |
-| `yod transpile <file>` | Transpile a file and write its OCaml counterpart. |
+| Command                    | Description                                       |
+| :------------------------- | :------------------------------------------------ |
+| `yod`                      | Parse standard input and display the AST.         |
+| `yod <file.yod>`           | Parse a file and display the AST.                 |
+| `yod fmt`                  | Format standard input and output it.              |
+| `yod fmt <file.yod>`       | Format a file and overwrite it.                   |
+| `yod transpile`            | Transpile standard input and output it.           |
+| `yod transpile <file.yod>` | Transpile a file and write its OCaml counterpart. |
 
 You can run transpiled files using:
 
