@@ -18,7 +18,7 @@
 (package
  (name yod)
  (synopsis "The Yod programming language")
- (description "Yod is a purely functional programming language.")
+ (description "Yod is a simple functional programming language.")
  (depends
   (ocaml
    (>= 5))
@@ -29,4 +29,4 @@
   uuseg
   yojson)
  (tags
-  (language functional pure lang)))
+  (language functional lang)))

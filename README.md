@@ -24,10 +24,10 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Features
 
-- **Purely functional**
-  - No side effects
-  - Pattern matching
-  - Polymorphism
+- **Functional**
+  - Clearer code
+  - Predictable output
+  - Simple reasoning
 - **VS Code language support**
   - Syntax highlighting
   - Formatting
