@@ -6,7 +6,7 @@
   description = "The Yod programming language";
 
   inputs = {
-    nixpkgs.url = "github:nix-ocaml/nix-overlays";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs =
@@ -23,7 +23,7 @@
         default = yod;
         yod = pkgs.ocamlPackages.buildDunePackage rec {
           pname = "yod";
-          version = "2025.6.22";
+          version = "2025.6.29";
           src = self;
           strictDeps = false;
           buildInputs = with pkgs.ocamlPackages; [
@@ -61,7 +61,7 @@
       });
 
       devShells = forAllSystems (pkgs: {
-        default = pkgs.mkShell {
+        default = pkgs.mkShell.override { stdenv = pkgs.fastStdenv; } {
           inputsFrom = with pkgs; lib.attrValues packages.${system};
           packages =
             with pkgs;
@@ -69,11 +69,11 @@
               packages.${system}.default
               reuse
               just
-              ocamlformat_0_27_0
             ]
             ++ (with ocamlPackages; [
               ocaml-lsp
               utop
+              ocamlformat_0_27_0
             ]);
         };
       });

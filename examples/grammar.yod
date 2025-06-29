@@ -6,12 +6,12 @@
 
 # Type aliases allow defining new names for existing types.
 # Here we define a 2D point as a tuple of two Float values.
+# Type constructors must start with an uppercase letter, PascalCase is preferred.
 
 def Point := (Float, Float)
 
 # Algebraic Data Types (ADTs) enable defining custom types with multiple variants.
 # Each variant can optionally carry data of any type.
-# Type constructors must start with an uppercase letter, PascalCase is preferred.
 
 def Shape := {
   Circle as Float;
@@ -46,7 +46,7 @@ def greeting : String = "Hello"
 def loremIpsum : String = "Lorem \"ipsum\" dolor sit amet.
 Lorem ipsum dolor sit amet."
 
-# Functions can take multiple parameters using currying.
+# Functions can take multiple parameters using currying, camelCase is preferred.
 # Type signatures are specified with the “->” notation.
 # Tuples can be destructured directly in parameter position.
 

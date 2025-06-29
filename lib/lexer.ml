@@ -21,7 +21,7 @@ let integer = [%sedlex.regexp? Plus digit, Opt exp]
 
 let floating = [%sedlex.regexp? Plus digit, '.', Plus digit, Opt exp]
 
-let alnum = [%sedlex.regexp? lowercase | uppercase | digit]
+let alnum = [%sedlex.regexp? lowercase | uppercase | digit | '_']
 
 (* We distinguish between uppercase and lowercase identifiers to simplify
    parsing of types, constructors and variables. *)
