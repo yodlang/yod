@@ -87,7 +87,7 @@ ocaml unix.cma -I +unix <file.ml>
 
 If you are using [NixOS](https://nixos.org/), please follow [these steps](https://github.com/yodlang/yod/wiki/Installation-on-NixOS).
 
-Or, download [the latest executable](https://github.com/yodlang/yod/releases/latest) for your system and [add it to your PATH](https://github.com/yodlang/yod/wiki/Adding-Yod-to-the-PATH).
+Or, download [the latest executable](https://github.com/yodlang/yod/releases/latest) for your system, rename it to `yod`, and [add it to your PATH](https://github.com/yodlang/yod/wiki/Adding-Yod-to-the-PATH).
 
 On Unix-like operating systems, you will then need to run the following command:
 
