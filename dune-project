@@ -13,7 +13,7 @@
 
 (authors "Milesime <213074881+milesime@users.noreply.github.com>")
 
-(license GPL-3.0-only)
+(license GPL-2.0-only)
 
 (package
  (name yod)

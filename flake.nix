@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Milesime <213074881+milesime@users.noreply.github.com>
 #
-# SPDX-License-Identifier: GPL-3.0-only
+# SPDX-License-Identifier: GPL-2.0-only
 
 {
   description = "The Yod programming language";
@@ -43,7 +43,7 @@
             description = "The Yod programming language";
             homepage = "https://github.com/yodlang/yod";
             license = with pkgs.lib.licenses; [
-              gpl3Only
+              gpl2Only
               cc-by-sa-40
               cc0
             ];

@@ -1,7 +1,7 @@
 (*
  * SPDX-FileCopyrightText: 2025 Milesime <213074881+milesime@users.noreply.github.com>
  *
- * SPDX-License-Identifier: GPL-3.0-only
+ * SPDX-License-Identifier: GPL-2.0-only
  *)
 
 type position = Lexing.position =
