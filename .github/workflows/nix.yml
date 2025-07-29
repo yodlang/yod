@@ -22,7 +22,7 @@ jobs:
         uses: DeterminateSystems/nix-installer-action@v19
 
       - name: Update flake
-        uses: DeterminateSystems/update-flake-lock@v26
+        uses: DeterminateSystems/update-flake-lock@v27
         with:
           pr-title: Update flake
           commit-msg: Update flake
