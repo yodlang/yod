@@ -10,11 +10,7 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      ...
-    }:
+    { self, nixpkgs, ... }:
     let
       forAllSystems = f: with nixpkgs; lib.genAttrs lib.systems.flakeExposed (s: f legacyPackages.${s});
     in
@@ -67,6 +63,13 @@
             with pkgs;
             [
               packages.${system}.default
+              nixd
+              nixfmt-rfc-style
+              prettierd
+              marksman
+              harper
+              yaml-language-server
+              just-lsp
               reuse
               just
             ]

@@ -40,7 +40,7 @@ Even if the code is syntactically sound, it still needs to make sense logically.
 
 The AST first needs to be simplified, this is where desugaring comes in, see [`desugar.ml`](https://github.com/yodlang/yod/blob/main/lib/desugar.ml). It walks the AST and simplify the sugared syntax: for example, it transform lambdas of multiple parameters to multiple single-parameter lambdas chained together. In doing so, the AST becomes much easier for the coming analysis passes to handle.
 
-Next up comes usage analysis, see [`usage_analysis.ml`](https://github.com/yodlang/yod/blob/main/lib/usage_analysis.ml). It again analyzes the AST, for issues related to variable, type and variant usage, by performing various static analyses on the program, including:
+Next up comes usage analysis, see [`usage_analysis.ml`](https://github.com/yodlang/yod/blob/main/lib/usage_analysis.ml). It again analyzes the AST, for issues related to variable, type, and variant usage, by performing various static analyzes on the program, including:
 
 - Warning about unused identifiers
 - Checking for references to undefined identifiers

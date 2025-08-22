@@ -28,14 +28,14 @@ SPDX-License-Identifier: CC-BY-SA-4.0
    export PATH="$PATH:/path/to/yod/executable/directory"
    ```
 
-   For Zsh (`~/.zshrc`):
+   For zsh (`~/.zshrc`):
 
    ```zsh
    path+=('/path/to/yod/executable/directory')
    export PATH
    ```
 
-   For Fish (`~/.config/fish/config.fish`):
+   For fish (`~/.config/fish/config.fish`):
 
    ```fish
    set -U fish_user_paths /path/to/yod/executable/directory $fish_user_paths

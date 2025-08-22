@@ -56,7 +56,7 @@ def fib n : Int -> Int =
 
 #### Grammar
 
-For a detailed presentation of the Yod syntax and features, please have a look at [our sample grammar file](https://github.com/yodlang/yod/blob/main/examples/grammar.yod).
+For a detailed presentation of the Yod syntax and features, please take a look at [our sample grammar file](https://github.com/yodlang/yod/blob/main/examples/grammar.yod).
 
 You can also take a look at a more fleshed out program like [our implementation of Conway’s Game of Life](https://github.com/yodlang/yod/blob/main/examples/conway.yod).
 
